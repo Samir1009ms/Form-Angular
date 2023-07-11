@@ -1,3 +1,4 @@
+import { DataService } from './../../services/data.service';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
@@ -7,7 +8,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent {
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private DataService: DataService) { }
   submitted = false;
 
   addForm = this.fb.group({
@@ -22,9 +23,12 @@ export class FormComponent {
     if (this.addForm.valid) {
       alert('Formunuz başarıyla gönderildi.');
       console.log(this.addForm.value);
+      // @ts-ignore
+      this.DataService.setData(this.addForm.value);
       this.addForm.reset();
     } else {
       this.submitted = true;
     }
+
   }
 }

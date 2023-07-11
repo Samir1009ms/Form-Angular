@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+@mixin flex-around-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 @mixin flex-column {
     display: flex;
     flex-direction: column;
@@ -21,6 +27,7 @@
 @mixin transition($property: all, $duration: 0.3s, $timing: ease) {
     transition: $property $duration $timing;
 }
+
 
 
 @mixin tablet {

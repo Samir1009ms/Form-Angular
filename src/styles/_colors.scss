@@ -1,5 +1,9 @@
 $color-primary: #333;
-$color-secondary: #ccc;
+$color-white: #fff;
 $color-background: #f1f1f1;
-$color-button: #000;
-$color-button-hover: #444;
+$color-text: #483c3c;
+$color-button: linear-gradient(135deg, #71b7e6, #9b59b6);
+$color-button-hover: linear-gradient(-135deg, #71b7e6, #9b59b6);
+$body-background: linear-gradient(135deg, #71b7e6, #9b59b6);
+$form-background: #fff;
+$border-color: #807878;

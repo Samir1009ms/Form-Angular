@@ -1,104 +1,125 @@
 <section class="container">
   <!-- Ad,Soyad, Təvəllü, Cins, Qeyd,  -->
+
   <form (ngSubmit)="onSubmit()" [formGroup]="addForm" class="form">
-    <div class="form__container">
-      <label class="form__container-title" for="name">Ad</label>
-      <input
-        class="form__container-input"
-        type="text"
-        name="name"
-        id="name"
-        placeholder="Adınızı daxil edin"
-        formControlName="name"
-      />
-      <small
-        class="form__container-error"
-        *ngIf="addForm.controls.name.invalid && submitted"
-      >
-        Adınızı daxil edin
-      </small>
+    <div class="form__title">
+      <h2>Məlumatları daxil edin</h2>
     </div>
     <div class="form__container">
-      <label class="form__container-title" for="surname">Soyad</label>
-      <input
-        class="form__container-input"
-        type="text"
-        name="surname"
-        id="surname"
-        placeholder="Soyadınızı daxil edin"
-        formControlName="surname"
-      />
-      <small
-        class="form__container-error"
-        *ngIf="addForm.controls.surname.invalid && submitted"
-      >
-        Soyadınızı daxil edin
-      </small>
-    </div>
-    <div class="form__container">
-      <label class="form__container-title" for="birthday">Təvəllüd</label>
-      <input
-        class="form__container-input"
-        type="date"
-        name="birthday"
-        id="birthday"
-        formControlName="age"
-      />
-      <small
-        class="form__container-error"
-        *ngIf="addForm.controls.age.invalid && submitted"
-      >
-        Yaşınızı daxil edin
-      </small>
-    </div>
-    <div class="form__container">
-      <span>Cins</span>
-      <div class="form__container__cins">
-        <label class="form__container__cins-title" for="kisi">Kisi</label>
+      <div class="form__container__cont">
+        <label class="form__container__cont-title" for="name">Ad</label>
         <input
-          class="form__container__cins-radio"
-          type="radio"
-          formControlName="cins"
-          name="cins"
-          id="kisi"
-          value="kisi"
+          class="form__container__cont-input"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Adınızı daxil edin"
+          formControlName="name"
         />
-        <label class="form__container__cins-title" for="qadin">Qadin</label>
-        <input
-          class="form__container__cins-radio"
-          type="radio"
-          formControlName="cins"
-          name="cins"
-          id="qadin"
-          value="qadin"
-        />
+        <small
+          class="form__container__cont-error"
+          *ngIf="addForm.controls.name.invalid && submitted"
+        >
+          Adınızı daxil edin
+        </small>
       </div>
-      <small
-        class="form__container-error"
-        *ngIf="addForm.controls.cins.invalid && submitted"
-      >
-        Cinsiyyətinizi daxil edin
-      </small>
+      <div class="form__container__cont">
+        <label class="form__container__cont-title" for="surname">Soyad</label>
+        <input
+          class="form__container__cont-input"
+          type="text"
+          name="surname"
+          id="surname"
+          placeholder="Soyadınızı daxil edin"
+          formControlName="surname"
+        />
+        <small
+          class="form__container__cont-error"
+          *ngIf="addForm.controls.surname.invalid && submitted"
+        >
+          Soyadınızı daxil edin
+        </small>
+      </div>
     </div>
     <div class="form__container">
-      <label class="form__container-title" for="note">Qeyd</label>
-      <textarea
-        class="form__container-text"
-        name="note"
-        id="note"
-        formControlName="note"
-        cols="30"
-        rows="10"
-      ></textarea>
-      <small
-        class="form__container-error"
-        *ngIf="addForm.controls.note.invalid && submitted"
-      >
-        Qeydinizi daxil edin
-      </small>
+      <div class="form__container__cont">
+        <label class="form__container__cont-title" for="birthday">
+          Təvəllüd
+        </label>
+        <input
+          class="form__container__cont-input"
+          type="date"
+          name="birthday"
+          id="birthday"
+          formControlName="age"
+          placeholder="Təvəllüdünüzü daxil edin"
+        />
+        <small
+          class="form__container__cont-error"
+          *ngIf="addForm.controls.age.invalid && submitted"
+        >
+          Yaşınızı daxil edin
+        </small>
+      </div>
+      <div class="form__container__cont">
+        <span>Cins</span>
+        <div class="form__container__cont__cins">
+          <input
+            class="form__container__cont__cins-radio"
+            type="radio"
+            formControlName="cins"
+            name="cins"
+            id="kisi"
+            value="kisi"
+          />
+          <label class="form__container__cont__cins-title" for="kisi">
+            Kisi
+          </label>
+
+          <input
+            class="form__container__cont__cins-radio"
+            type="radio"
+            formControlName="cins"
+            name="cins"
+            id="qadin"
+            value="qadin"
+          />
+          <label class="form__container__cont__cins-title" for="qadin">
+            Qadin
+          </label>
+        </div>
+        <small
+          class="form__container__cont-error"
+          *ngIf="addForm.controls.cins.invalid && submitted"
+        >
+          Cinsiyyətinizi daxil edin
+        </small>
+      </div>
+    </div>
+    <div class="form__container">
+      <div class="form__container__textarea">
+        <label class="form__container__textarea-title" for="note">Qeyd</label>
+        <textarea
+          class="form__container__textarea-text"
+          name="note"
+          id="note"
+          formControlName="note"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <small
+          class="form__container__textarea-error"
+          *ngIf="addForm.controls.note.invalid && submitted"
+        >
+          Qeydinizi daxil edin
+        </small>
+      </div>
     </div>
     <div class="form__container">
       <button class="form__container-btn" type="submit">Göndər</button>
     </div>
   </form>
+  <div>
+    <a routerLink="">back</a>
+  </div>
 </section>

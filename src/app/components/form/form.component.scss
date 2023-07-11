@@ -6,53 +6,116 @@
 .container {
     width: 100%;
     height: 100vh;
-    background: $color-primary;
+    // background: $color-primary;
     @include flex-center;
 
 
     .form {
-        width: 50%;
+        width: 45%;
         height: auto;
-        background: red;
+        background: $form-background;
         @include flex-column;
         padding: 20px;
         row-gap: 10px;
+        border-radius: 8px;
 
+        &__title {
+            font-size: $font-size-medium;
+            color: $color-text;
+            margin-bottom: 10px
+        }
 
         &__container {
-            @include flex-start;
-            row-gap: 4px;
-            width: 70%;
+            @include flex-around-center;
+            width: 80%;
+            column-gap: 10px;
 
-            &-title {
-                font-size: $font-size-medium;
-                color: $color-secondary;
+            &__cont {
+                @include flex-start;
+                row-gap: 6px;
+                width: 47%;
+                position: relative;
+                margin-bottom: 15px;
+
+                &-title {
+                    font-size: $font-size-small;
+                    color: $color-text;
+                }
+
+                &-input {
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 8px;
+                    border: 1px solid #807878;
+                    outline: none;
+                    text-indent: 10px;
+                }
+
+                &-error {
+                    color: red;
+                    position: absolute;
+                    bottom: -19px;
+                }
+
+                &__cins {
+                    @include flex-around-center;
+                    column-gap: 15px;
+
+                    &-title {
+                        font-size: $font-size-small;
+                        color: $color-text;
+                        border: 1px solid #807878;
+                        padding: 5px 10px;
+                        border-radius: 6px;
+                    }
+
+                    &-radio {
+                        display: none;
+
+                        &:checked+label {
+                            border: 1px solid #5a76f0;
+                        }
+                    }
+                }
             }
 
-            &-input {
+            &__textarea {
                 width: 100%;
-                height: 40px;
-                border-radius: 10px;
-                border: none;
-                outline: none;
-                text-indent: 10px;
+                @include flex-start;
+                row-gap: 6px;
+                position: relative;
+                margin-bottom: 15px;
+
+
+                &-text {
+                    width: 100%;
+                    resize: none;
+                    outline: none;
+                    border: 1px solid #807878;
+                    padding: 5px;
+                    border-radius: 8px;
+                }
+
+                &-title {
+                    font-size: $font-size-medium;
+                    color: $color-text;
+                }
+
+                &-error {
+                    color: red;
+                    position: absolute;
+                    bottom: -19px;
+                }
+
             }
 
-            &__cins {
-
-                &-title {}
-
-                &-radio {}
-
-            }
-
-            &-text {}
 
             &-btn {
+                width: 100%;
                 padding: 8px 26px;
                 background: $color-button;
                 border: none;
-                color: aqua;
+                color: $color-white;
                 border-radius: 10px;
                 cursor: pointer;
                 @include transition;
