@@ -5,12 +5,12 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./components/main/main.module').then(m => m.MainModule),
+      import('./pages/main/main.module').then(m => m.MainModule),
   },
   {
     path: 'addForm',
     loadChildren: () =>
-      import('./components/form/form.module').then(m => m.FormModule),
+      import('./pages/form/form.module').then(m => m.FormModule),
   },
   {
     path: '**',
@@ -22,4 +22,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -1,0 +1,50 @@
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
+@import '../../../styles/typography';
+
+.main {
+  width: 100%;
+  height: 85%;
+  @include flex-center;
+
+  .container {
+    width: 75%;
+    height: 80%;
+    background: white;
+    @include flex-column;
+    border-radius: 10px;
+    row-gap: 10px;
+    justify-content: flex-start;
+    padding: 30px 5px;
+
+    &__top {
+      width: 95%;
+      @include flex-between-center;
+
+      &-title {
+      }
+
+      &-btn {
+        padding: 7px 24px;
+        background-color: $color-button;
+        border: none;
+        border-radius: 5px;
+        color: $color-white;
+        cursor: pointer;
+        @include transition;
+        &:hover {
+          background-color: $color-button-hover;
+        }
+      }
+    }
+
+    &__bottom {
+      width: 100%;
+      height: 90%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
+@import '../../../styles/typography';
+
+.table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  &__title {
+    .title {
+      background-color: #353048;
+      color: $color-white;
+    }
+    &__cont {
+      height: 40px;
+      &:nth-child(2n) {
+        background: #e9e7e7;
+      }
+
+      &-text {
+        border: 1px solid black;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 10px;
+      }
+    }
+  }
+}
