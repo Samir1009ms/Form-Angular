@@ -1,0 +1,68 @@
+// @import '../../styles/colors';
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
+@import '../../../styles/typography';
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: $color-primary;
+    @include flex-center;
+
+
+    .form {
+        width: 50%;
+        height: auto;
+        background: red;
+        @include flex-column;
+        padding: 20px;
+        row-gap: 10px;
+
+
+        &__container {
+            @include flex-start;
+            row-gap: 4px;
+            width: 70%;
+
+            &-title {
+                font-size: $font-size-medium;
+                color: $color-secondary;
+            }
+
+            &-input {
+                width: 100%;
+                height: 40px;
+                border-radius: 10px;
+                border: none;
+                outline: none;
+                text-indent: 10px;
+            }
+
+            &__cins {
+
+                &-title {}
+
+                &-radio {}
+
+            }
+
+            &-text {}
+
+            &-btn {
+                padding: 8px 26px;
+                background: $color-button;
+                border: none;
+                color: aqua;
+                border-radius: 10px;
+                cursor: pointer;
+                @include transition;
+
+                &:hover {
+                    background: $color-button-hover;
+                }
+            }
+
+            &-error {}
+        }
+    }
+}
