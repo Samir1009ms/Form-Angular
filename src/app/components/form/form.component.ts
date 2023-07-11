@@ -21,10 +21,12 @@ export class FormComponent {
 
   onSubmit() {
     if (this.addForm.valid) {
-      alert('Formunuz başarıyla gönderildi.');
+      // alert('Formunuz başarıyla gönderildi.');
       console.log(this.addForm.value);
       // @ts-ignore
-      this.DataService.setData(this.addForm.value);
+      this.DataService.setData(this.addForm.value).subscribe((res) => {
+        console.log(res);
+      });
       this.addForm.reset();
     } else {
       this.submitted = true;

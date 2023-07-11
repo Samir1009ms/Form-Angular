@@ -1,45 +1,45 @@
 @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin flex-around-center {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-
+@mixin flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @mixin flex-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin flex-start {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 @mixin transition($property: all, $duration: 0.3s, $timing: ease) {
-    transition: $property $duration $timing;
+  transition: $property $duration $timing;
 }
 
-
-
 @mixin tablet {
-    @media (max-width: #{$medium}) {
-        @content;
-    }
-
+  @media (max-width: #{$medium}) {
+    @content;
+  }
 }
 
 @mixin mobile {
-    @media (max-width: #{$small}) {
-        @content;
-    }
-
+  @media (max-width: #{$small}) {
+    @content;
+  }
 }

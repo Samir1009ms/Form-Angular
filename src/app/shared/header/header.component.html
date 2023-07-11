@@ -1,0 +1,30 @@
+<header class="header">
+  <nav class="header__navbar">
+    <div class="header__navbar__logo" routerLink="">
+      <img
+        class="header__navbar__logo-img"
+        src="../../../assets/Logo.png"
+        alt=""
+      />
+    </div>
+    <div class="header__navbar__menu">
+      <ul class="header__navbar__menu__item">
+        <li
+          class="header__navbar__menu__item-link"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink=""
+        >
+          Main
+        </li>
+        <li
+          class="header__navbar__menu__item-link"
+          routerLinkActive="active"
+          routerLink="addForm"
+        >
+          Add Form
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
