@@ -1,7 +1,6 @@
 @import './colors';
 @import './typography';
 
-
 // Spacings
 $spacing-small: 10px;
 $spacing-medium: 20px;
@@ -10,5 +9,6 @@ $spacing-large: 50px;
 // Transitions
 $transition-fast: 0.3s;
 
+// media queries
 $medium: 991px;
 $small: 575px;

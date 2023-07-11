@@ -31,6 +31,7 @@
         border-radius: 5px;
         color: $color-white;
         cursor: pointer;
+        @include transition;
         &:hover {
           background: $color-button-hover;
         }

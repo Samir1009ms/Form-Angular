@@ -32,6 +32,7 @@
   transition: $property $duration $timing;
 }
 
+// media queries
 @mixin tablet {
   @media (max-width: #{$medium}) {
     @content;
